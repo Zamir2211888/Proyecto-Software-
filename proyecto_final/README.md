@@ -26,7 +26,7 @@ Por defecto se levantan 2 replicas pero se puede modificar esto en `k8s/deployme
 ## Fase 3:
 Ahora nos encontramos con multiples nodos en este caso 2, corriendo varias replicas del backend y una unica replica de base de datos, se considera una buena practica el tener una unica replica de base de datos ya que esto garantiza la integridad de los datos, ademas, las bases de datos suelen estar optimizadas para sostener multiples conexiones de manera paralela y consultas en cache por lo que la escalabilidad horizontal no resulta compatible con el objetivo de integridad de los datos y no aporta significativamente en el rendimiento, ejecucion y tiempo de respuesta.
 
-Para esta fase es requisito contar con almenos dos maquinas que sirvan de nodos y que cada nodo tenga a kubectl en sus usuarios con permisos de administracion
+Para esta fase es requisito contar con almenos dos maquinas que sirvan de nodos y que cada nodo tenga microk8s para la clusterizacion y kubectl en sus usuarios con permisos de administracion
 ```bash
 sudo usermod -a -G microk8s $USER
 ```
