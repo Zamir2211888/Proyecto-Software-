@@ -11,15 +11,25 @@
 
 ## Estructura General del Proyecto:
 │ proyecto_final/
+
 ├── app/                              # Aplicación backend FastAPI
+
 │ ├── Dockerfile
+
 │ ├── index.js
+
 │ └── package.json
+
 │
+
 ├── docker-compose.yml                # Despliegue local con Docker Compose
+
 ├── .env                              # Variables de entorno
-├── k8s/                                         
+
+├── k8s/
+
    ├── deployment.yaml
+
    └── postgres-deployment.yaml
 
 
