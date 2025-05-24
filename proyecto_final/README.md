@@ -40,3 +40,8 @@ mientras que los demas nodos deberan ejecutar
 ```bash
 microk8s join <ip nodo principal>:25000/<codigo de union proporcionado por el comando anterior>
 ```
+Posteriormente se pueden cambiar los valores de la cantidad de replicas del deploy del backend para desplegar usando los comandos
+```bash
+kubectl apply -f k8s/postgres-deployment.yaml
+kubectl apply -f k8s/deployment.yaml
+```
