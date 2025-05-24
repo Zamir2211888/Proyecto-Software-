@@ -1,0 +1,25 @@
+services:
+  app:
+    build: ./app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    command: ["sh", "-c", "until nc -z -v -w30 postgres 5432; do echo 'Waiting for database connection...'; sleep 5; done; node index.js"]
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=testdb
+  postgres:
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: testdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
