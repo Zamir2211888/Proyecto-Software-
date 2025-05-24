@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: backend-app
 spec:
-  replicas: 1 # Cambiar para pruebas 1, 2 o 3
+  replicas: 2 #2 es default pero puede cambiarse para pruebas con 1, 2, o mas replicas
   selector:
     matchLabels:
       app: backend-app
