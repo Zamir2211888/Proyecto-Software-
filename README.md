@@ -1,6 +1,6 @@
 # Proyecto Final Software 3
 
-![Banner del Proyecto](baner/.png) 
+![Banner del Proyecto](baner/baner.png) 
 
 
 ## **Autores**
