@@ -1,4 +1,16 @@
 # Proyecto Final Software 3
 
-## Analisis 
+## Estructura
 
+/app
+  Dockerfile
+  index.js
+  package.json
+/k8s
+  deployment.yaml
+  postgres-deployment.yaml
+/docker-compose.yml
+README.md
+
+
+##
